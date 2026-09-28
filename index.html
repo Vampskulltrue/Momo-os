@@ -47,7 +47,105 @@ h1 span{color:var(--peach)}
 .cta{max-width:1120px;margin:30px auto 110px;padding:0 28px}.cta-box{position:relative;overflow:hidden;border:1px solid rgba(255,205,169,.18);border-radius:30px;padding:60px;background:linear-gradient(135deg,rgba(255,205,169,.12),rgba(255,255,255,.025));display:flex;justify-content:space-between;align-items:center;gap:30px}.cta-box:after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:rgba(255,180,137,.12);filter:blur(60px);right:-70px;top:-120px}.cta-box h2{font-size:46px;letter-spacing:-.055em;margin:0 0 10px}.cta-box p{color:var(--muted);margin:0}.footer{border-top:1px solid var(--line);padding:30px 28px;color:#65605e;font-size:12px;display:flex;justify-content:space-between;max-width:1120px;margin:auto}.toast{position:fixed;z-index:50;bottom:24px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#f6e9de;color:#382219;padding:12px 17px;border-radius:12px;font-size:13px;font-weight:800;box-shadow:0 15px 45px #0008;transition:.3s}.toast.show{opacity:1;transform:translate(-50%,0)}
 @media(max-width:850px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:130px;min-height:auto}.mascot{max-width:500px}.grid{grid-template-columns:1fr 1fr}.devices,.showcase{grid-template-columns:1fr}.section-head{display:block}.cta-box{display:block;padding:38px}.cta-box .btn{margin-top:25px}.footer{display:block}.footer span{display:block;margin-top:8px}}
 @media(max-width:560px){.hero{padding-inline:20px}.section,.cta{padding-inline:20px}.grid{grid-template-columns:1fr}.hero p{font-size:16px}.section{padding-block:75px}.device-panel h3{font-size:34px}.cta-box h2{font-size:37px}.nav{width:calc(100% - 18px)}}
-</style>
+/* =========================
+   MOMO GBA
+   ========================= */
+
+.momo-gba {
+  max-width: 1120px;
+  margin: 30px auto;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 25px;
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,.06),
+    rgba(255,255,255,.02)
+  );
+}
+
+.momo-gba-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.momo-gba-text h2 {
+  font-size: 38px;
+  margin: 10px 0;
+}
+
+.gba-subtitle {
+  font-size: 18px;
+  color: var(--peach);
+  margin-bottom: 18px;
+}
+
+.momo-gba-text p {
+  line-height: 1.7;
+}
+
+.development-badge {
+  display: inline-block;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: var(--peach);
+  color: #24151c;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.gba-features {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.gba-features li {
+  margin: 11px 0;
+}
+
+.momo-gba-image img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 45px rgba(0,0,0,.35);
+}
+
+
+/* RG CUBE XX STATUS */
+
+.device-status {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  color: var(--peach);
+  font-size: 11px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+  .momo-gba-content {
+    grid-template-columns: 1fr;
+  }
+
+  .momo-gba {
+    margin: 20px 14px;
+    padding: 22px;
+  }
+
+  .momo-gba-text h2 {
+    font-size: 32px;
+  }
+}
+</style> 
 </head>
 <body>
 <nav class="nav">
@@ -124,6 +222,39 @@ h1 span{color:var(--peach)}
       </div>
     </div>
   </div>
+</section>
+  <section class="momo-gba">
+    <div class="momo-gba-content">
+
+        <div class="momo-gba-text">
+            <span class="development-badge">IN DEVELOPMENT</span>
+
+            <h2>Momo GBA</h2>
+
+            <p class="gba-subtitle">
+                A cozy Game Boy Advance emulator for Android.
+            </p>
+
+            <p>
+                Momo GBA is a custom GBA emulator currently in development
+                as part of the Momo ecosystem. It is designed around the
+                same cozy, clicky and lightweight experience as Momo OS.
+            </p>
+
+            <ul class="gba-features">
+                <li>✓ Cozy and clicky interface</li>
+                <li>✓ Fast GBA emulation</li>
+                <li>✓ Custom Momo themes</li>
+                <li>✓ Designed for handhelds</li>
+                <li>✓ Part of the Momo ecosystem</li>
+            </ul>
+        </div>
+
+        <div class="momo-gba-image">
+            <img src="momo-gba.png" alt="Momo GBA emulator interface">
+        </div>
+
+    </div>
 </section>
 
 <section class="section" id="interface">
